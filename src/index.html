@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Formbase</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css"/>
+    <!-- build:css /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+    <script src="/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="/elements/elements.html"/>
+</head>
+<body class="fullbleed">
+
+<div class="title-bar fixed-top layout horizontal center">
+    <div class="logo layout horizontal center-center">
+        <img src="/images/logo.png" alt="Formbase"/>
+    </div>
+</div>
+<div class="banner container layout vertical">
+    <div class="title-padding"></div>
+    <div class="call-to-action vertical layout center-justified">
+        <h1>Gathering information has never been this simple.</h1>
+        <div class="email-field layout horizontal center-center wrap">
+            <span><input type="email" placeholder="Enter your email"/></span>
+            <span><button type="submit">Submit</button></span>
+        </div>
+    </div>
+</div>
+<div class="showcase container layout vertical">
+    <div class="title-padding"></div>
+    <div class="flex" is="fb-carousel"></div>
+</div>
+<div class="features container layout vertical">
+    <div class="title-padding"></div>
+    <h1>Features</h1>
+    <div class="icon-controls layout horizontal center-center wrap">
+        <div class="icons layout horizontal center-center">&#xf0ea;</div>
+        <div class="icons layout horizontal center-center">&#xf1eb;</div>
+        <div class="icons layout horizontal center-center">&#xf039;</div>
+        <div class="icons layout horizontal center-center">&#xf118;</div>
+        <div class="icons layout horizontal center-center">&#xf0c0;</div>
+        <div class="icons layout horizontal center-center">&#xf041;</div>
+        <div class="icons layout horizontal center-center">&#xf0ac;</div>
+        <div class="icons layout horizontal center-center">&#xf030;</div>
+        <div class="icons layout horizontal center-center">&#xf108;</div>
+        <div class="icons layout horizontal center-center">&#xf08e;</div>
+    </div>
+
+    <div class="feature-texts flex layout horizontal center-center">
+        <div class="text">
+            <h2>Create Custom Forms</h2>
+            <ul>
+                <li>Use our platform to create forms easily!</li>
+                <li>Have an existing form? Let us convert it for you!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer container vertical layout">
+    <div class="title-padding"></div>
+    <div class="call-to-action flex vertical layout center-center">
+        <h1>Sign up to get early access.</h1>
+        <div class="email-field layout horizontal center-center wrap">
+            <span><input type="email" placeholder="Enter your email"/></span>
+            <span><button type="submit">Submit</button></span>
+        </div>
+    </div>
+    <div class="contact horizontal layout center-center wrap">
+        <span>Questions? Email us at <a class="highlight" href="mailto:use@formbase.com">use@formbase.com</a></span>
+    </div>
+</div>
+
+<!-- build:js /scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+</body>
+</html>

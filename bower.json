@@ -1,0 +1,29 @@
+{
+  "name": "FormbaseLandingPage",
+  "version": "1.0.0",
+  "authors": [
+    "Neil John Ramal <ramalneiljohn@gmail.com>"
+  ],
+  "description": "Landing Page for Formbase",
+  "main": "index.html",
+  "license": "Diliman Labs",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "~4.3.0",
+    "jquery": "~2.1.3",
+    "web-animations-js": "~1.0.7",
+    "animate.css": "~3.2.6",
+    "TemplateBinding": "Polymer/TemplateBinding#~0.5.5",
+    "webcomponentsjs": "~0.6.0",
+    "polymer-expressions": "Polymer/polymer-expressions#~0.5.5",
+    "polymer": "Polymer/polymer#~0.5.5",
+    "core-elements": "Polymer/core-elements#~0.5.5"
+  }
+}

@@ -1,0 +1,139 @@
+.layout.horizontal,
+.layout.horizontal-reverse,
+.layout.vertical,
+.layout.vertical-reverse
+  display: flex
+
+.layout.inline
+  display: inline-flex
+
+.layout.horizontal
+  flex-direction row
+
+.layout.horizontal-reverse
+  flex-direction row-reverse
+
+.layout.vertical
+  flex-direction column
+
+.layout.vertical-reverse
+  flex-direction column-reverse
+
+.layout.wrap
+  flex-wrap wrap
+
+.layout.wrap-reverse
+  flex-wrap wrap-reverse
+
+.flex-auto
+  flex 1 1 auto
+
+.flex-none
+  flex none
+
+.flex
+  flex 1
+
+for i in (1..12)
+  .flex-{i}
+    flex i
+
+// alignment in cross-axis
+.layout.start
+  align-items flex-start
+
+.layout.center,
+.layout.center-center
+  align-items center
+
+.layout.end
+  align-items flex-end
+
+// alignment in main axis
+
+.layout.start-justified
+  justify-content flex-start
+
+.layout.center-justified,
+.layout.center-center
+  justify-content center
+
+.layout.end-justified
+  justify-content flex-end
+
+.layout.around-justified
+  justify-content space-around
+
+.layout.justified
+  justify-content space-between
+
+// self alignment
+
+.self-start
+  align-self flex-start
+
+.self-center
+  align-self center
+
+.self-end
+  align-self flex-end
+
+.self-stretch
+  align-self stretch
+
+// Other layout
+
+.block
+  display block
+
+[hidden]
+  display none !important
+
+.invisible
+  visibility hidden !important
+
+.relative
+  position relative
+
+.fit
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+body.fullbleed
+  margin 0
+  height 100vh
+
+.scroll
+  overflow-scrolling touch
+  overflow auto
+
+// fixed position
+
+.fixed-bottom,
+.fixed-left,
+.fixed-right,
+.fixed-top
+  position fixed
+
+.fixed-top
+  top 0
+  right 0
+  left 0
+
+.fixed-right
+  top 0
+  right 0
+  bottom 0
+
+.fixed-bottom
+  right 0
+  bottom 0
+  left 0
+
+.fixed-left
+  top 0
+  bottom 0
+  left 0

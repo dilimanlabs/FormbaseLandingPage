@@ -1,0 +1,69 @@
+*
+  box-sizing border-box
+body
+  font-family "Open Sans", sans-serif
+  user-select none
+
+.title-padding
+  width 100%
+  height 80px
+  @media(max-width: 500px)
+    height 50px
+a
+  text-decoration none
+
+.container
+  width 100%
+  height 100%
+  min-height 720px
+
+.call-to-action
+  height 200px
+  width 100%
+  color #ffffff
+  h1
+    text-align center
+    font-weight 300
+    font-size 40px
+    @media(max-width: 500px)
+      font-size 20px
+  .email-field
+
+    span
+      padding 0 5px
+      input[type=email]
+        height 40px
+        width 300px
+        border none
+        outline none
+        box-shadow inset 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(70, 120, 230, 0.8)
+        color rgb(41, 42, 41)
+        font-family "Open Sans", sans-serif
+        font-weight 400
+        font-size 18px
+        padding 0 5px
+        text-align center
+        text-shadow 0 0 1px rgba(0, 0, 0, 0.25)
+        transition all 400ms
+        @media(max-width: 500px)
+          width 250px
+      input[type=email]:focus
+        box-shadow inset 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0 0 8px rgba(70, 120, 230, 0.8)
+      button[type=submit]
+        border none
+        height 40px
+        width 100px
+        background-color #e05304
+        color #ffffff
+        text-shadow 0 1px 1px rgba(0, 0, 0, 0.1)
+        font-family "Open Sans", sans-serif
+        text-transform uppercase
+        font-size 18px
+        outline none
+        transition all 300ms
+        @media(max-width: 500px)
+          margin-top 10px
+          width 200px
+      button.pressed
+        box-shadow inset 0 0 10px 0 rgba(0,0,0,0.25)
+        padding-top 2px
