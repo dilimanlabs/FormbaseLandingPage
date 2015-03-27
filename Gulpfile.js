@@ -88,6 +88,8 @@ gulp.task('html', function () {
     return gulp.src(['src/**/*.html', '!src/{elements, test}/**/*.html'])
         .pipe($.if('*.html', $.replace('elements/elements.html', 'elements/elements.vulcanized.html')))
         .pipe(assets)
+        .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+        .pipe(assets.restore())
         .pipe($.useref())
         .pipe($.if('*.html', $.minifyHtml({
             quotes: true,
