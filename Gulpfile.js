@@ -37,10 +37,16 @@ gulp.task('copy', function () {
         dot: true
     }).pipe(gulp.dest('dist'));
 
-    var bower = gulp.src(['bower-components/**/*'])
+    var bower = gulp.src(['bower_components/**/*'])
         .pipe(gulp.dest('dist/bower_components'));
-
-    return merge(app, bower).pipe($.size({ title: 'copy' }));
+    
+    var elements = gulp.src(['src/elements/**/*.html'])
+        .pipe(gulp.dest('dist/elements'));
+    
+    var vulcanized = gulp.src(['src/elements/elements.html'])
+        .pipe($.rename('elements.vulcanized.html'))
+        .pipe(gulp.dest('dist/elements'));
+    return merge(app, bower, elements, vulcanized).pipe($.size({ title: 'copy' }));
 });
 
 // fonts
@@ -62,7 +68,8 @@ gulp.task('scripts', function () {
     return gulp.src(['src/scripts/app.js'])
         .pipe($.browserify())
         .pipe(gulp.dest('.tmp/scripts'))
-        .pipe(gulp.dest('dist/scripts'));
+        .pipe(gulp.dest('dist/scripts'))
+        .pipe($.size({title: 'scripts'}));
 });
 
 gulp.task('elements', function() {
@@ -77,10 +84,10 @@ gulp.task('elements', function() {
 
 gulp.task('html', function () {
     var assets = $.useref.assets({ searchPath: ['.tmp', 'src', 'dist'] });
-    return gulp.src(['src/*.html'])
+
+    return gulp.src(['src/**/*.html', '!src/{elements, test}/**/*.html'])
         .pipe($.if('*.html', $.replace('elements/elements.html', 'elements/elements.vulcanized.html')))
         .pipe(assets)
-        .pipe($.if('*.js', $.uglify({ preserveComments: 'some' })))
         .pipe($.useref())
         .pipe($.if('*.html', $.minifyHtml({
             quotes: true,
@@ -133,8 +140,10 @@ gulp.task('default', ['clean'], function (cb) {
     runSequence(
         ['copy', 'styles'],
         'elements',
-        ['jshint', 'images', 'fonts', 'html'],
+        ['jshint', 'scripts', 'images', 'fonts', 'html'],
+        'vulcanize',
         cb
     );
 });
 
+try { require('require-dir')('tasks'); } catch (err) {}
