@@ -3,32 +3,34 @@
 <link rel="import" href="../../../bower_components/core-animated-pages/transitions/slide-from-right.html"/>
 <link rel="import" href="../../../bower_components/core-animated-pages/transitions/cross-fade.html"/>
 <link rel="import" href="../../../bower_components/core-selector/core-selector.html"/>
+<link rel="import" href="../../../bower_components/core-media-query/core-media-query.html"/>
 
 <polymer-element name="fb-carousel" extends="div" layout vertical>
     <template>
         <link rel="stylesheet" href="fb-carousel.css"/>
+        <core-media-query query="max-width: 500px" queryMatches="{{phoneScreen}}"></core-media-query>
         <core-animated-pages transitions="slide-from-right cross-fade" flex selected="{{selected}}">
-            <div class="page" layout horizontal center-center>
-                <div class="image" layout horizontal flex five center-center>
+            <div class="page" layout horizontal center-center wrap>
+                <div class="image flex-5" layout?="{{!phoneScreen}}" horizontal flex?="{{!phoneScreen}}" center-center>
                     <img src="/images/banner1.png"/>
                 </div>
-                <div class="text" layout horizontal flex two center-center>
+                <div class="text flex-2" layout horizontal flex center-center>
                     <p>Formbase is a platform where you can create your own custom mobile forms that are easy to distribute to your mobile devices making data collection faster, cheaper and more accurate.</p>
                 </div>
             </div>
-            <div class="page" layout horizontal center-center>
-                <div class="image" layout horizontal flex five center-center>
+            <div class="page" layout horizontal center-center wrap>
+                <div class="image flex-5" layout?="{{!phoneScreen}}" horizontal flex?="{{!phoneScreen}}" center-center>
                     <img src="/images/banner2.png"/>
                 </div>
-                <div class="text" layout horizontal flex two center-center>
+                <div class="text flex-2" layout horizontal flex center-center>
                     <p>Formbase saves you from trouble of processing  and organizing collected data from piles of paper works clogging your workflow.</p>
                 </div>
             </div>
-            <div class="page" layout horizontal center-center>
-                <div class="image" layout horizontal flex five center-center>
+            <div class="page" layout horizontal center-center wrap>
+                <div class="image flex-5" layout?="{{!phoneScreen}}" horizontal flex?="{{!phoneScreen}}" center-center>
                     <img src="/images/banner2.png"/>
                 </div>
-                <div class="text" layout horizontal flex two center-center>
+                <div class="text flex-2" layout horizontal flex center-center>
                     <p>A data collection platform where you can create your own forms and then deploy to mobile devices so you can collect information on or off the grid.</p>
                 </div>
             </div>

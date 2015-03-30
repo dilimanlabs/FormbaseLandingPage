@@ -11,10 +11,12 @@ core-animated-pages
       padding 0 20px
       font-weight 300
       font-size 30px
-      p
-        transform translateX(-200px)
+      @media(max-width: 500px)
+        font-size 20px
     .image
       padding 0 20px
+      @media(max-width: 500px)
+        display none
       img
         max-width 100%
         width auto/9
@@ -37,3 +39,12 @@ core-animated-pages
   .core-selected
     .circle
       background-color #999
+
+.flex-2
+  flex 2
+  @media(max-width: 500px)
+    flex 1
+.flex-5
+  flex 5
+  @media(max-width: 500px)
+    flex 1

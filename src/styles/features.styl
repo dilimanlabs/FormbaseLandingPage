@@ -6,6 +6,8 @@
       font-size 20px
   .icon-controls
     height 80px
+    @media(max-width: 500px)
+      width 80%
     .icons
       font-family 'FontAwesome'
       width 80px
@@ -29,10 +31,14 @@
     background-position center center
     background-origin border-box
     background-size contain
+    @media(max-width: 500px)
+      background none
     .text
       width 40%
       max-width 500px
       height 100%
+      @media(max-width: 500px)
+        width 90%
       h2
         font-size 25px
         font-weight 600
